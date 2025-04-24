@@ -83,7 +83,11 @@ class _DeleteVehiclePageState extends State<DeleteVehiclePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Delete Vehicles'),
+        iconTheme: const IconThemeData(color: Colors.white),
+        title: const Text(
+          'Delete Vehicles',
+          style: TextStyle(color: Colors.white),
+        ),
         backgroundColor: Colors.blue.shade900,
       ),
       drawer: const SideDrawer(),

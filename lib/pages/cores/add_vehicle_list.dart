@@ -92,7 +92,9 @@ class _AddPageState extends State<AddPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: const Text('Add Vehicle'),
+          iconTheme: const IconThemeData(color: Colors.white),
+          title:
+              const Text('Add Vehicle', style: TextStyle(color: Colors.white)),
           backgroundColor: Colors.blue.shade900),
       drawer: const SideDrawer(),
       body: SingleChildScrollView(
@@ -102,23 +104,23 @@ class _AddPageState extends State<AddPage> {
           const SizedBox(height: 10),
           _buildTextField(_registrationController, 'Registration Number'),
           const SizedBox(height: 10),
-          GestureDetector(
-            onTap: _pickImage,
-            child: Container(
-              width: double.infinity,
-              height: 150,
-              decoration: BoxDecoration(
-                border: Border.all(),
-                image: _selectedImage != null
-                    ? DecorationImage(
-                        image: FileImage(_selectedImage!), fit: BoxFit.cover)
-                    : null,
-              ),
-              child: _selectedImage == null
-                  ? const Center(child: Text('Tap to select image'))
-                  : null,
-            ),
-          ),
+          // GestureDetector(
+          //   onTap: _pickImage,
+          //   child: Container(
+          //     width: double.infinity,
+          //     height: 150,
+          //     decoration: BoxDecoration(
+          //       border: Border.all(),
+          //       image: _selectedImage != null
+          //           ? DecorationImage(
+          //               image: FileImage(_selectedImage!), fit: BoxFit.cover)
+          //           : null,
+          //     ),
+          //     child: _selectedImage == null
+          //         ? const Center(child: Text('Tap to select image'))
+          //         : null,
+          //   ),
+          // ),
           const SizedBox(height: 10),
           _buildTextField(_notesController, 'Notes', maxLines: 3),
           const SizedBox(height: 20),

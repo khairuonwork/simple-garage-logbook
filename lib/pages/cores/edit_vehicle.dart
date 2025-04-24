@@ -65,7 +65,11 @@ class _EditVehiclePageState extends State<EditVehiclePage> {
 
     return Scaffold(
       appBar: AppBar(
-          title: const Text('Edit Vehicle'),
+          iconTheme: const IconThemeData(color: Colors.white),
+          title: const Text(
+            'Edit Vehicle',
+            style: TextStyle(color: Colors.white),
+          ),
           backgroundColor: Colors.blue.shade900),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),

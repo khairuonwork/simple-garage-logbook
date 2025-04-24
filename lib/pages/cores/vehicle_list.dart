@@ -35,7 +35,11 @@ class _VehicleListPageState extends State<VehicleListPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: const Text('Vehicle List'),
+          iconTheme: const IconThemeData(color: Colors.white),
+          title: const Text(
+            'Vehicle List',
+            style: TextStyle(color: Colors.white),
+          ),
           backgroundColor: Colors.blue.shade900),
       drawer: const SideDrawer(),
       body: FutureBuilder<List<Map<String, dynamic>>>(
